@@ -36,8 +36,8 @@ class CategoriaController extends Controller
     public function store(CategoriaFormRequest $request){
         $categoria=new Categoria;
         $categoria->nombre=$request->get('nombre');
-        $categoria->descripcion=$request->get("descripcion");
-        $catagoria->condicion='1';
+        $categoria->descripcion=$request->get('descripcion');
+        $categoria->condicion='1';
         $categoria->save();
 
         return Redirect::to('almacen/categoria');

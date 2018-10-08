@@ -16,3 +16,6 @@ Route::get('/', function () {
 });
 
 Route::resource('almacen/categoria','CategoriaController');
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
