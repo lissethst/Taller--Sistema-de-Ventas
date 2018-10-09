@@ -17,6 +17,7 @@
                     <th>Proveedor</th>
                     <th>Comprobante</th>
                     <th>Impuesto</th>
+                    <th>Total</th>
                     <th>Estado</th>
                     <th>Opciones</th>
                 </thead>
@@ -28,6 +29,7 @@
                     <td>{{$ing->nombre}}</td>
                     <td>{{$ing->tipo_comprobante.': '.$ing->num_comprobante}}</td>
                     <td>{{$ing->impuesto}}</td>
+                    <td>{{$ing->total}}</td>
                     <td>{{$ing->estado}}</td>
                     <td>
                         <a href = "{{URL::action('IngresoController@show',$ing->idingreso)}}"><button class="btn btn-primary">Detalles</button></a>
