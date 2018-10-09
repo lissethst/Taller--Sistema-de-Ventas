@@ -5,7 +5,4 @@
         <h3>BIENVENIDO AL SISTEMA DE FLOTEX S.A.C</h3>
     </div>  
 </div>
-
-
-
 @endsection
