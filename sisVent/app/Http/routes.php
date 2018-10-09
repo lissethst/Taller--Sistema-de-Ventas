@@ -12,21 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
 Route::resource('almacen/categoria','CategoriaController');
-<<<<<<< HEAD
-
 Route::resource('ventas/cliente','ClienteController');
-
-//Route::auth();
-
-//Route::get('/home', 'HomeController@index');
-=======
 Route::resource('almacen/articulo','ArticuloController');
 
 Route::auth();
 
-
->>>>>>> 84ade9df2fd89095d3a45ad5e419dd2242da76f3
+Route::get('/home', 'HomeController@index');

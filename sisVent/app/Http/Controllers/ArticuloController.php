@@ -13,7 +13,7 @@ use DB;
 class ArticuloController extends Controller
 {
     public function _construct(){
-
+        $this->middleware('auth');
     }
 
     public function index(Request $request){
