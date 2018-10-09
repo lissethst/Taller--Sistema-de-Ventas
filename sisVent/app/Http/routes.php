@@ -22,3 +22,4 @@ Route::resource('almacen/articulo','ArticuloController');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
