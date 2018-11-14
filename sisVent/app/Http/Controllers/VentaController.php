@@ -8,9 +8,9 @@ use sisVent\Http\Requests;
 
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Input;
-use sisVentas\Http\Requests\VentaFormRequest;
-use sisVentas\Venta;
-use sisVentas\DetalleVenta;
+use sisVent\Http\Requests\VentaFormRequest;
+use sisVent\Venta;
+use sisVent\DetalleVenta;
 use DB;
 
 use Carbon\Carbon;
@@ -60,7 +60,7 @@ class VentaController extends Controller
          $venta=new Venta;
          $venta->idcliente=$request->get('idcliente');
          $venta->tipo_comprobante=$request->get('tipo_comprobante');
-         $venta->serie_comprobante=$request->get('serie_comprobante');
+        //  $venta->serie_comprobante=$request->get('serie_comprobante');
          $venta->num_comprobante=$request->get('num_comprobante');
          $venta->total_venta=$request->get('total_venta');
          
@@ -90,7 +90,7 @@ class VentaController extends Controller
 
          DB::commit();
 
-        }catch(\Exception $e)
+        }catch(Exception $e)
         {
            DB::rollback();
         }
@@ -103,7 +103,7 @@ class VentaController extends Controller
      $venta=DB::table('venta as v')
             ->join('persona as p','v.idcliente','=','p.idpersona')
             ->join('detalleventa as dv','v.idventa','=','dv.idventa')
-            ->select('v.idventa','v.fecha_hora','p.nombre','v.tipo_comprobante','v.serie_comprobante','v.num_comprobante','v.impuesto','v.estado','v.total_venta')
+            ->select('v.idventa','v.fecha_hora','p.nombre','v.tipo_comprobante','v.num_comprobante','v.impuesto','v.estado','v.total_venta')
             ->where('v.idventa','=',$id)
             ->first();
 

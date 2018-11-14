@@ -3048,6 +3048,7 @@ class ComposerStaticInit1cf84b26411fe06611025bc98293ac25
         'sisVent\\Console\\Commands\\Inspire' => __DIR__ . '/../..' . '/app/Console/Commands/Inspire.php',
         'sisVent\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'sisVent\\DetalleIngreso' => __DIR__ . '/../..' . '/app/DetalleIngreso.php',
+        'sisVent\\DetalleVenta' => __DIR__ . '/../..' . '/app/DetalleVenta.php',
         'sisVent\\Events\\Event' => __DIR__ . '/../..' . '/app/Events/Event.php',
         'sisVent\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'sisVent\\Http\\Controllers\\ArticuloController' => __DIR__ . '/../..' . '/app/Http/Controllers/ArticuloController.php',
@@ -3060,6 +3061,7 @@ class ComposerStaticInit1cf84b26411fe06611025bc98293ac25
         'sisVent\\Http\\Controllers\\IngresoController' => __DIR__ . '/../..' . '/app/Http/Controllers/IngresoController.php',
         'sisVent\\Http\\Controllers\\InicioController' => __DIR__ . '/../..' . '/app/Http/Controllers/InicioController.php',
         'sisVent\\Http\\Controllers\\ProveedorController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProveedorController.php',
+        'sisVent\\Http\\Controllers\\VentaController' => __DIR__ . '/../..' . '/app/Http/Controllers/VentaController.php',
         'sisVent\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'sisVent\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'sisVent\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -3070,6 +3072,7 @@ class ComposerStaticInit1cf84b26411fe06611025bc98293ac25
         'sisVent\\Http\\Requests\\IngresoFormRequest' => __DIR__ . '/../..' . '/app/Http/Requests/IngresoFormRequest.php',
         'sisVent\\Http\\Requests\\PersonaFormRequest' => __DIR__ . '/../..' . '/app/Http/Requests/PersonaFormRequest.php',
         'sisVent\\Http\\Requests\\Request' => __DIR__ . '/../..' . '/app/Http/Requests/Request.php',
+        'sisVent\\Http\\Requests\\VentaFormRequest' => __DIR__ . '/../..' . '/app/Http/Requests/VentaFormRequest.php',
         'sisVent\\Ingreso' => __DIR__ . '/../..' . '/app/Ingreso.php',
         'sisVent\\Jobs\\Job' => __DIR__ . '/../..' . '/app/Jobs/Job.php',
         'sisVent\\Persona' => __DIR__ . '/../..' . '/app/Persona.php',
@@ -3078,6 +3081,7 @@ class ComposerStaticInit1cf84b26411fe06611025bc98293ac25
         'sisVent\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'sisVent\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'sisVent\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'sisVent\\Venta' => __DIR__ . '/../..' . '/app/Venta.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
