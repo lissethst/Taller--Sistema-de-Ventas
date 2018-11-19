@@ -19,8 +19,9 @@ use Illuminate\Support\Collection;
 
 class VentaController extends Controller
 {
-    public function _construct(){
-        $this->middleware('auth');
+    public function __construct()
+    {
+
     }
     public function index(Request $request)
     {
