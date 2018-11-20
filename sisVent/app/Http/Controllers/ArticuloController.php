@@ -21,14 +21,16 @@ class ArticuloController extends Controller
             $query=trim($request->get('searchText'));
             $articulos=DB::table('articulo as a')
             ->join('categoria as c','a.idcategoria','=','c.idcategoria')
-            ->select('a.idarticulo','a.nombre','a.codigo','a.stock','c.nombre as categoria','a.descripcion','a.estado')
+            ->select('a.idarticulo','a.nombre','a.codigo','a.stock','c.nombre as categoria','a.descripcion','a.estado','a.color','a.gramaje')
             ->where('a.nombre','LIKE','%'.$query.'%')
-            ->orwhere('a.codigo','LIKE','%'.$query.'%')
+            ->orwhere('c.nombre','LIKE','%'.$query.'%')
+            ->orwhere('a.gramaje','LIKE','%'.$query.'%')
+            ->orwhere('a.color','LIKE','%'.$query.'%')
             ->orderBy('a.idarticulo','desc')
             ->paginate(7);
-            
             return view('almacen.articulo.index',["articulos"=>$articulos,"searchText"=>$query]);
         }
+                       
 
     }
 
@@ -48,6 +50,8 @@ class ArticuloController extends Controller
         $articulo->stock=$request->get('stock');
         $articulo->descripcion=$request->get('descripcion');   
         $articulo->estado='Activo';
+        $articulo->color=$request->get('color');  
+        $articulo->gramaje=$request->get('gramaje');  
         $articulo->save();
 
         return Redirect::to('almacen/articulo');
@@ -73,7 +77,8 @@ class ArticuloController extends Controller
         $articulo->nombre=$request->get('nombre');
         $articulo->stock=$request->get('stock');
         $articulo->descripcion=$request->get('descripcion');   
-
+        $articulo->color=$request->get('color');  
+        $articulo->gramaje=$request->get('gramaje');
         $articulo->update();
 
         return Redirect::to('almacen/articulo');
@@ -86,4 +91,40 @@ class ArticuloController extends Controller
 
         return Redirect::to('almacen/articulo');
     }
+
+
+    public function filtro(Request $request){
+        if($request){
+            $query=trim($request->get('searchText'));
+            if(get('tipoFiltro') == "color"){
+                $articulos=DB::table('articulo as a')
+                ->join('categoria as c','a.idcategoria','=','c.idcategoria')
+                ->select('a.idarticulo','a.nombre','a.codigo','a.stock','c.nombre as categoria','a.descripcion','a.estado','a.color','a.gramaje')
+                ->where('a.color','LIKE','%'.$query.'%')
+                ->orderBy('a.idarticulo','desc')
+                ->paginate(7);
+                return view('almacen.articulo.index',["articulos"=>$articulos,"searchText"=>$query]);
+            }elseif (get('tipoFiltro' == "gramaje")) {
+                 $articulos=DB::table('articulo as a')
+                ->join('categoria as c','a.idcategoria','=','c.idcategoria')
+                ->select('a.idarticulo','a.nombre','a.codigo','a.stock','c.nombre as categoria','a.descripcion','a.estado','a.color','a.gramaje')
+                ->where('a.gramaje','LIKE','%'.$query.'%')
+                ->orderBy('a.idarticulo','desc')
+                ->paginate(7);
+                return view('almacen.articulo.index',["articulos"=>$articulos,"searchText"=>$query]);
+            
+            }elseif (get('tipoFiltro' == "categoria")) {
+                $articulos=DB::table('articulo as a')
+                ->join('categoria as c','a.idcategoria','=','c.idcategoria')
+                ->select('a.idarticulo','a.nombre','a.codigo','a.stock','c.nombre as categoria','a.descripcion','a.estado','a.color','a.gramaje')
+                ->where('c.nombre','LIKE','%'.$query.'%')
+                ->orderBy('a.idarticulo','desc')
+                ->paginate(7);
+                return view('almacen.articulo.index',["articulos"=>$articulos,"searchText"=>$query]);
+
+            }
+            
+        }
+
+    } 
 }
