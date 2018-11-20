@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('contenido')
 <div class = "row">
-    <div class="col-lg-8 col-sm-8 col-xs-12">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
         <h3>Listado de Articulos <a href="articulo/create"><button class="btn btn-success">Nuevo</button></a></h3>
         @include('almacen.articulo.search')
 
@@ -19,6 +19,8 @@
                     <th>Categoria</th>
                     <th>Stock</th>
                     <th>Estado</th>
+                    <th>Color</th>
+                    <th>Gramaje</th>
                     <th>Opciones</th>
                 </thead>
 
@@ -31,6 +33,8 @@
                     <td>{{$art->categoria}}</td>
                     <td>{{$art->stock}}</td>
                     <td>{{$art->estado}}</td>
+                    <td>{{$art->color}}</td>
+                    <td>{{$art->gramaje}}</td>
                     <td>
                         <a href = "{{URL::action('ArticuloController@edit',$art->idarticulo)}}"><button class="btn btn-info">Editar</button></a>
                         <a href = "" data-target="#modal-delete-{{$art->idarticulo}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>

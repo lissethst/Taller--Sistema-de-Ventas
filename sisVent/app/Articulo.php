@@ -11,7 +11,7 @@ class Articulo extends Model
 
     public $timestamps=false;
 
-    protected $fillable = ['idcategoria','codigo','nombre','stock','descripcion','estado'];
+    protected $fillable = ['idcategoria','codigo','nombre','stock','descripcion','estado','color','gramaje'];
 
     protected $guarded=[];
 }
