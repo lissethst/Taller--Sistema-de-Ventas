@@ -4,7 +4,7 @@
  use sisVent\Http\Requests;
  use sisVent\User;
 use Illuminate\Support\Facades\Redirect;
-use sisVent\Http\Request\UsuarioFormRequest;
+use sisVent\Http\Requests\UsuarioFormRequest;
 use DB;
  class UsuarioController extends Controller
 {
