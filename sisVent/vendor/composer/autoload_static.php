@@ -17,6 +17,7 @@ class ComposerStaticInit1cf84b26411fe06611025bc98293ac25
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
+        'a806c12c6e24e7e4e900847766218dba' => __DIR__ . '/..' . '/uxweb/sweet-alert/src/SweetAlert/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -35,6 +36,10 @@ class ComposerStaticInit1cf84b26411fe06611025bc98293ac25
         'W' => 
         array (
             'Webmozart\\Assert\\' => 17,
+        ),
+        'U' => 
+        array (
+            'UxWeb\\SweetAlert\\' => 17,
         ),
         'S' => 
         array (
@@ -114,6 +119,10 @@ class ComposerStaticInit1cf84b26411fe06611025bc98293ac25
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'UxWeb\\SweetAlert\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/uxweb/sweet-alert/src/SweetAlert',
         ),
         'Symfony\\Polyfill\\Util\\' => 
         array (
@@ -2973,6 +2982,12 @@ class ComposerStaticInit1cf84b26411fe06611025bc98293ac25
         'Symfony\\Polyfill\\Util\\TestListenerTrait' => __DIR__ . '/..' . '/symfony/polyfill-util/TestListenerTrait.php',
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
+        'UxWeb\\SweetAlert\\ConvertMessagesIntoSweetAlert' => __DIR__ . '/..' . '/uxweb/sweet-alert/src/SweetAlert/ConvertMessagesIntoSweetAlert.php',
+        'UxWeb\\SweetAlert\\LaravelSessionStore' => __DIR__ . '/..' . '/uxweb/sweet-alert/src/SweetAlert/LaravelSessionStore.php',
+        'UxWeb\\SweetAlert\\SessionStore' => __DIR__ . '/..' . '/uxweb/sweet-alert/src/SweetAlert/SessionStore.php',
+        'UxWeb\\SweetAlert\\SweetAlert' => __DIR__ . '/..' . '/uxweb/sweet-alert/src/SweetAlert/SweetAlert.php',
+        'UxWeb\\SweetAlert\\SweetAlertNotifier' => __DIR__ . '/..' . '/uxweb/sweet-alert/src/SweetAlert/SweetAlertNotifier.php',
+        'UxWeb\\SweetAlert\\SweetAlertServiceProvider' => __DIR__ . '/..' . '/uxweb/sweet-alert/src/SweetAlert/SweetAlertServiceProvider.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
@@ -3061,6 +3076,7 @@ class ComposerStaticInit1cf84b26411fe06611025bc98293ac25
         'sisVent\\Http\\Controllers\\IngresoController' => __DIR__ . '/../..' . '/app/Http/Controllers/IngresoController.php',
         'sisVent\\Http\\Controllers\\InicioController' => __DIR__ . '/../..' . '/app/Http/Controllers/InicioController.php',
         'sisVent\\Http\\Controllers\\ProveedorController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProveedorController.php',
+        'sisVent\\Http\\Controllers\\UsuarioController' => __DIR__ . '/../..' . '/app/Http/Controllers/UsuarioController.php',
         'sisVent\\Http\\Controllers\\VentaController' => __DIR__ . '/../..' . '/app/Http/Controllers/VentaController.php',
         'sisVent\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'sisVent\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -3072,6 +3088,7 @@ class ComposerStaticInit1cf84b26411fe06611025bc98293ac25
         'sisVent\\Http\\Requests\\IngresoFormRequest' => __DIR__ . '/../..' . '/app/Http/Requests/IngresoFormRequest.php',
         'sisVent\\Http\\Requests\\PersonaFormRequest' => __DIR__ . '/../..' . '/app/Http/Requests/PersonaFormRequest.php',
         'sisVent\\Http\\Requests\\Request' => __DIR__ . '/../..' . '/app/Http/Requests/Request.php',
+        'sisVent\\Http\\Requests\\UsuarioFormRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UsuarioFormRequest.php',
         'sisVent\\Http\\Requests\\VentaFormRequest' => __DIR__ . '/../..' . '/app/Http/Requests/VentaFormRequest.php',
         'sisVent\\Ingreso' => __DIR__ . '/../..' . '/app/Ingreso.php',
         'sisVent\\Jobs\\Job' => __DIR__ . '/../..' . '/app/Jobs/Job.php',
