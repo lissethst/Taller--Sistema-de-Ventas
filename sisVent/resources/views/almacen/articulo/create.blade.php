@@ -54,18 +54,6 @@
                             <input type="text" name="descripcion" required value="{{old('descripcion')}}" class="form-control" placeholder="Descripcion del articulo..">
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                            <label for="color">Color</label>
-                            <input type="text" name="color" value="{{old('color')}}" class="form-control" placeholder="Color del articulo..">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                            <label for="gramaje">Gramaje</label>
-                            <input type="text" name="gramaje" required value="{{old('gramaje')}}" class="form-control" placeholder="Gramaje del articulo..">
-                        </div>
-                    </div>
                 </div>
 
 
