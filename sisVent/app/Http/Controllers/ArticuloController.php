@@ -12,7 +12,7 @@ use DB;
 
 class ArticuloController extends Controller
 {
-    public function _construct(){
+    public function __construct(){
         $this->middleware('auth');
     }
 

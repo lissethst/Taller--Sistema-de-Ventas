@@ -10,7 +10,7 @@ use DB;
 
 class InicioController extends Controller
 {
-    public function _construct(){
+    public function __construct(){
         $this->middleware('auth');
     }
 

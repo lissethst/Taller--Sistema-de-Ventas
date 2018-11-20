@@ -14,7 +14,7 @@ use sisVent\Http\Controllers\Controller;
 
 class ClienteController extends Controller
 {
-    public function _construct(){
+    public function __construct(){
         $this->middleware('auth');
     }
 
