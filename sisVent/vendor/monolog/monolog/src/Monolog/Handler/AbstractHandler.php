@@ -14,14 +14,13 @@ namespace Monolog\Handler;
 use Monolog\Formatter\FormatterInterface;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Logger;
-use Monolog\ResettableInterface;
 
 /**
  * Base Handler class providing the Handler structure
  *
  * @author Jordi Boggiano <j.boggiano@seld.be>
  */
-abstract class AbstractHandler implements HandlerInterface, ResettableInterface
+abstract class AbstractHandler implements HandlerInterface
 {
     protected $level = Logger::DEBUG;
     protected $bubble = true;

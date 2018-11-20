@@ -123,7 +123,6 @@ return [
 
     'providers' => [
 
-        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
         /*
          * Laravel Framework Service Providers...
          */
@@ -172,7 +171,6 @@ return [
     */
 
     'aliases' => [
-        'Alert' => UxWeb\SweetAlert\SweetAlert::class,
         
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
