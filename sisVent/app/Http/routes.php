@@ -27,6 +27,12 @@ Route::resource('seguridad/usuario','UsuarioController');
 
 Route::resource('/inicio','InicioController');
 
+/*REPORTES*/
+Route::resource('/reporteArticulo','PdfArtController');
+Route::resource('/reporteProveedor','PdfProvController');
+Route::resource('/reporteCliente','PdfClieController');
+Route::resource('/reporteIngresos','PdfIngController');
+Route::resource('/reporteVentas','PdfVentController');
 
 Route::auth();
 

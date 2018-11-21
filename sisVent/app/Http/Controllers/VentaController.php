@@ -25,7 +25,6 @@ class VentaController extends Controller
 
     public function index(Request $request)
     {
-        
         if ($request)
         {
            $query=trim($request->get('searchText'));
@@ -34,6 +33,7 @@ class VentaController extends Controller
             ->join('detalleventa as dv','v.idventa','=','dv.idventa')
             ->select('v.idventa','v.fecha_hora','p.nombre','v.tipo_comprobante','v.num_comprobante','v.impuesto','v.estado','v.total_venta')
             ->where('v.num_comprobante','LIKE','%'.$query.'%')
+            ->where('v.estado','=','A')
             ->orderBy('v.idventa','desc')
             ->groupBy('v.idventa','v.fecha_hora','p.nombre','v.tipo_comprobante','v.num_comprobante','v.impuesto','v.estado')
             ->paginate(7);

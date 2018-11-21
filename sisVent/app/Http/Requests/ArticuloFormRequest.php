@@ -28,10 +28,7 @@ class ArticuloFormRequest extends Request
             'codigo'=>'required|max:50',
             'nombre'=>'required|max:100',
             'stock'=>'required|numeric',
-            'descripcion'=>'max:512',
-            'color'=>'max:15',
-            'gramaje'=>'numeric'
-
+            'descripcion'=>'max:512'
             
         ];
     }

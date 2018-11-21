@@ -2,7 +2,9 @@
 @section('contenido')
 <div class = "row">
     <div class="col-lg-8 col-sm-8 col-xs-12">
-        <h3>Listado de Ventas <a href="venta/create"><button class="btn btn-success">Nuevo</button></a></h3>
+        <h3>Listado de Ventas <a href="venta/create"><button class="btn btn-success">Nuevo</button></a>
+        <a href="/reporteVentas" target=”_blank”><button class="btn btn-success">Reporte</button></a>    
+        </h3>
         @include('ventas.venta.search')
 
     </div>  
@@ -41,6 +43,7 @@
             </table>
         </div>
         {{$ventas->render()}}
-    </div> 
+    </div>
 </div>
+
 @endsection

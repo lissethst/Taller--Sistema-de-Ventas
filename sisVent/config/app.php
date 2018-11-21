@@ -126,6 +126,8 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+        /*'Anouar\Fpdf\FpdfServiceProvider',*/
+        /*Barryvdh\DomPDF\ServiceProvider::class,*/
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -171,7 +173,9 @@ return [
     */
 
     'aliases' => [
-        
+
+        /*'Fpdf'=>'Anouar\Fpdf\Facades\Fpdf',*/
+        /*'PDF' => 'Barryvdh\DomPDF\Facade',*/
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,

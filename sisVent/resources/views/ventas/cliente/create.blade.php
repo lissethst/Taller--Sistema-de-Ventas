@@ -2,7 +2,7 @@
 @section('contenido')
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <h3>Nuevo Cliente</h3>
+            <h3>Nueva Cliente</h3>
             @if(count($errors)>0)
             <div class="alert alert-danger">
                 <ul>
@@ -45,8 +45,7 @@
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
             <div class="form-group">
                 <label for="num_documento">Numero documento</label>
-                <input type="text" name="num_documento"  value="{{old('num_documento')}}" class="form-control" class="numDoc" min='8' max='8' placeholder="Número de documento...">
-                                 
+                <input type="text" name="num_documento"  value="{{old('num_documento')}}" class="form-control" placeholder="Número de documento...">
             </div>
         </div>
 
@@ -60,7 +59,7 @@
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="text" name="email"  value="{{old('email')}}" class="form-control" placeholder="example@gmail.com">
+                <input type="text" name="email"  value="{{old('email')}}" class="form-control" placeholder="Email...">
             </div>
         </div>
 
@@ -71,21 +70,6 @@
             </div>
         </div>
     </div>
-
-    <!--<script type="text/javascript">
-        var select = document.getElementById('tipo_documento');
-        console.log("Valor del select");
-        console.log(select);
-        $(document).ready(function() {
-            if(select =="RUC"){
-                $(".numDoc").on("keydown", function() {
-                    this.max='11';
-                    console.log("valorrrr RUC 11")                 
-                });
-            }
-
-        });
-    </script>-->
         {!!Form::close()!!}
 
     
